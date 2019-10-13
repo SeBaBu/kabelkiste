@@ -1,7 +1,7 @@
 apt-get update
 apt-get upgrade
 
-apt-get install python3 vim tmux nano zsh git
+apt-get install python3 vim-nox tmux nano zsh git cmake
 
 
 
