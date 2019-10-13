@@ -15,7 +15,6 @@ call vundle#rc()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
 
 if iCanHazVundle == 0
   echo "Installing Bundles, please ignore key map error messages"
@@ -38,6 +37,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Vimjas/vim-python-pep8-indent'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -249,5 +249,8 @@ nnoremap k gk
 
 " Do not cut words when breaking lines.
 set linebreak
+
+" Searching with "/": Ignore case if search term is lower case.
+set smartcase
 
 colorscheme blackboard
