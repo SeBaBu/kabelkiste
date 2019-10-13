@@ -253,4 +253,15 @@ set linebreak
 " Searching with "/": Ignore case if search term is lower case.
 set smartcase
 
+
+" Strip trailing whitespaces on each save
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+
 colorscheme blackboard
