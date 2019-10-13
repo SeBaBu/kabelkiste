@@ -1,5 +1,6 @@
-# source ~/.bash_profile
-
+if [ -f ~/.bash_profile ]; then 
+    source ~/.bash_profile;
+fi
 
 
 # extra files in ~/.zsh/configs/pre , ~/.zsh/configs , and ~/.zsh/configs/post
@@ -65,6 +66,7 @@ PS1="(%*) %F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f %# " # https://wiki.gen
 # Other settings
 
 setopt autocd # Change directory without typing "cd" in front of it.
-
+alias scp='noglob scp' # Allows wildcards in scp commands
+alias rsync='noglob rsync' # Allows wildcards in rsync commands
 
 zstyle ':completion:*' rehash true # Find new executables for autcompletion
