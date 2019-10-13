@@ -236,9 +236,18 @@ if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
 
+" Relative line numbers, but real line number for current line
 set number relativenumber
 set nu rnu
 
+" Keep 8 rows above and below the kk
 set scrolloff=8
+
+" Jump to wrapped line instead of next real line.
+nnoremap j gj
+nnoremap k gk
+
+" Do not cut words when breaking lines.
+set linebreak
 
 colorscheme blackboard
