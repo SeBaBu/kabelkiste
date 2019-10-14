@@ -196,7 +196,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
- Autocomplete with dictionary words when spell check is on
+" Autocomplete with dictionary words when spell check is on
 set complete+=kspell
 
 
