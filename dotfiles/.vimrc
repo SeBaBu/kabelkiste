@@ -63,14 +63,14 @@ Plugin 'ervandew/supertab'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
+filetype plugin on
+
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
+
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
@@ -114,9 +114,9 @@ filetype plugin indent on
 augroup vimrcEx
   autocmd!
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it for commit messages, when the position is invalid, or when
-  " inside an event handler (happens when dropping a file on gvim).
+"  " When editing a file, always jump to the last known cursor position.
+"  " Don't do it for commit messages, when the position is invalid, or when
+"  " inside an event handler (happens when dropping a file on gvim).
   autocmd BufReadPost *
     \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal g`\"" |
@@ -134,7 +134,7 @@ augroup END
 
 " When the type of shell script is /bin/sh, assume a POSIX-compatible
 " shell for syntax highlighting purposes.
-let g:is_posix = 1
+"let g:is_posix = 1
 
 " Softtabs, 4 spaces
 set tabstop=4
@@ -149,18 +149,18 @@ set list listchars=tab:»·,trail:·,nbsp:·
 set nojoinspaces
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
+"if executable('ag')
+"  " Use Ag over Grep
+"  set grepprg=ag\ --nogroup\ --nocolor
 
-  " Use ag in fzf for listing files. Lightning fast and respects .gitignore
-  let $FZF_DEFAULT_COMMAND = 'ag --literal --files-with-matches --nocolor --hidden -g ""'
+"  " Use ag in fzf for listing files. Lightning fast and respects .gitignore
+"  let $FZF_DEFAULT_COMMAND = 'ag --literal --files-with-matches --nocolor --hidden -g ""'
 
-  if !exists(":Ag")
-    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-    nnoremap \ :Ag<SPACE>
-  endif
-endif
+"  if !exists(":Ag")
+"    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+"    nnoremap \ :Ag<SPACE>
+"  endif
+"endif
 
 " Make it obvious where 80 characters is
 set textwidth=80
@@ -174,7 +174,7 @@ set numberwidth=5
 " will insert tab at beginning of line,
 " will use completion if not at beginning
 
-set wildmode=list:longest,list:full
+"set wildmode=list:longest,list:full
 function! InsertTabWrapper()
     let col = col('.') - 1
     if !col || getline('.')[col - 1] !~ '\k'
@@ -187,14 +187,14 @@ inoremap <Tab> <C-r>=InsertTabWrapper()<CR>
 inoremap <S-Tab> <C-n>
 
 " Open new split panes to right and bottom, which feels more natural
-set splitbelow
-set splitright
+"set splitbelow
+"set splitright
 
 " Quicker window movement
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
+"nnoremap <C-j> <C-w>j
+"nnoremap <C-k> <C-w>k
+"nnoremap <C-h> <C-w>h
+"nnoremap <C-l> <C-w>l
 
 " Autocomplete with dictionary words when spell check is on
 set complete+=kspell
