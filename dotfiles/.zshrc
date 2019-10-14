@@ -1,4 +1,4 @@
-if [ -f ~/.bash_profile ]; then 
+if [ -f ~/.bash_profile ]; then
     source ~/.bash_profile;
 fi
 
@@ -68,5 +68,5 @@ PS1="(%*) %F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f %# " # https://wiki.gen
 setopt autocd # Change directory without typing "cd" in front of it.
 alias scp='noglob scp' # Allows wildcards in scp commands
 alias rsync='noglob rsync' # Allows wildcards in rsync commands
-
+setxkbmap -option caps:escape # Change capslock key to escape
 zstyle ':completion:*' rehash true # Find new executables for autcompletion
