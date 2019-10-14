@@ -36,8 +36,11 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'Townk/vim-autoclose'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'ervandew/supertab'
+
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -170,6 +173,7 @@ set numberwidth=5
 " Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning
+
 set wildmode=list:longest,list:full
 function! InsertTabWrapper()
     let col = col('.') - 1
@@ -181,6 +185,8 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <C-r>=InsertTabWrapper()<CR>
 inoremap <S-Tab> <C-n>
+
+
 
 " Switch between the last two files
 nnoremap <Leader><Leader> <C-^>
@@ -262,6 +268,17 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" Indent and unindent with tab.
+
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+
+" Fuzzy file search by default:
+set path+=**
 
 
 colorscheme darcula
