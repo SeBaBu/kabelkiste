@@ -264,4 +264,4 @@ endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 
-colorscheme blackboard
+colorscheme darcula
