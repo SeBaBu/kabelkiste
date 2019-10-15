@@ -40,6 +40,8 @@ Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'Townk/vim-autoclose'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'tpope/vim-fugitive'
 
 
 " The following are examples of different formats supported.
@@ -242,6 +244,17 @@ vnoremap <S-Tab> <gv
 
 " Fuzzy file search by default:
 set path+=**
+
+
+"Python paths (installed with "pip3 install <package> --user)
+"let $PATH.=':' . $HOME . '/Library/Python/3.7/'
+
+
+
+"Syntastic Settings:
+
+let g:syntastic_python_checkers = ['prospector', 'python']
+
 
 
 colorscheme darcula
