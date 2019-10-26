@@ -42,7 +42,9 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-fugitive'
-
+"Plugin 'lervag/vimtex'
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plugin 'keith/swift.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -189,8 +191,8 @@ inoremap <Tab> <C-r>=InsertTabWrapper()<CR>
 inoremap <S-Tab> <C-n>
 
 " Open new split panes to right and bottom, which feels more natural
-"set splitbelow
-"set splitright
+set splitbelow
+set splitright
 
 " Quicker window movement
 "nnoremap <C-j> <C-w>j
@@ -222,6 +224,7 @@ nnoremap k gk
 set linebreak
 
 " Searching with "/": Ignore case if search term is lower case.
+set ignorecase
 set smartcase
 
 
@@ -254,7 +257,8 @@ set path+=**
 "Syntastic Settings:
 
 let g:syntastic_python_checkers = ['prospector', 'python']
-
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_html_checkers=['tidy']
 
 
 colorscheme darcula
