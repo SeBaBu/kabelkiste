@@ -45,6 +45,7 @@ Plugin 'tpope/vim-fugitive'
 "Plugin 'lervag/vimtex'
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'keith/swift.vim'
+Plugin 'vim-scripts/TaskList.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
