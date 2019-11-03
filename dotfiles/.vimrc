@@ -227,7 +227,7 @@ set linebreak
 " Searching with "/": Ignore case if search term is lower case.
 set ignorecase
 set smartcase
-
+set hlsearch
 
 " Strip trailing whitespaces on each save
 fun! <SID>StripTrailingWhitespaces()
