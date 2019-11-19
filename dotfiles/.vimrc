@@ -47,6 +47,7 @@ Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'keith/swift.vim'
 Plugin 'vim-scripts/TaskList.vim'
 Plugin 'posva/vim-vue'
+Plugin 'mattn/emmet-vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -82,7 +83,7 @@ filetype plugin on
 
 
 " Leader
-let mapleader = " "
+let mapleader = ","
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
@@ -115,7 +116,6 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
 endif
 
-filetype plugin indent on
 
 augroup vimrcEx
   autocmd!
@@ -205,6 +205,8 @@ set splitright
 " Autocomplete with dictionary words when spell check is on
 set complete+=kspell
 
+"Autocompletion syntax:
+set omnifunc=syntaxcomplete#Complete
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
@@ -269,6 +271,7 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
 
-
+" Leader key for Emmet
+let g:user_emmet_leader_key=','
 
 colorscheme darcula
