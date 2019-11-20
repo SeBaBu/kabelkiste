@@ -48,6 +48,8 @@ Plugin 'keith/swift.vim'
 Plugin 'vim-scripts/TaskList.vim'
 Plugin 'posva/vim-vue'
 Plugin 'mattn/emmet-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'ap/vim-buftabline'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -256,7 +258,9 @@ set path+=**
 "Python paths (installed with "pip3 install <package> --user)
 "let $PATH.=':' . $HOME . '/Library/Python/3.7/'
 
-
+" Remap buffer navigation:
+map gn :bn<cr>
+map gp :bp<cr>
 
 " Syntastic Settings:
 
