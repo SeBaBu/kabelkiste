@@ -254,12 +254,12 @@ vnoremap <S-Tab> <gv
 " Fuzzy file search by default:
 set path+=**
 
-
 "Python paths (installed with "pip3 install <package> --user)
 "let $PATH.=':' . $HOME . '/Library/Python/3.7/'
 
 " Remap buffer navigation:
 map gn :bn<cr>
+map gN :bp<cr>
 map gp :bp<cr>
 
 " Syntastic Settings:
@@ -277,5 +277,11 @@ let g:netrw_winsize = 25
 
 " Leader key for Emmet
 let g:user_emmet_leader_key=','
+
+" jedi-vim:
+let g:jedi#popup_on_dot = 0
+
+
+
 
 colorscheme darcula
