@@ -50,6 +50,8 @@ Plugin 'posva/vim-vue'
 Plugin 'mattn/emmet-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'ap/vim-buftabline'
+Plugin 'junegunn/vim-peekaboo'
+Plugin 'artur-shaik/vim-javacomplete2'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -280,6 +282,14 @@ let g:user_emmet_leader_key=','
 
 " jedi-vim:
 let g:jedi#popup_on_dot = 0
+
+
+" Peekaboo window width
+let g:peekaboo_window = 'vert bo 65new'
+
+
+" javacomplete2
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 
 

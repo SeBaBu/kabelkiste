@@ -70,3 +70,4 @@ alias scp='noglob scp' # Allows wildcards in scp commands
 alias rsync='noglob rsync' # Allows wildcards in rsync commands
 setxkbmap -option caps:escape # Change capslock key to escape
 zstyle ':completion:*' rehash true # Find new executables for autcompletion
+
