@@ -269,6 +269,7 @@ map gp :bp<cr>
 let g:syntastic_python_checkers = ['prospector', 'python']
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_html_checkers=['tidy']
+let g:syntastic_json_checkers=['jsonlint']
 
 " netrw settings
 let g:netrw_banner = 0
