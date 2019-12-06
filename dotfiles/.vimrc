@@ -35,23 +35,29 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Vimjas/vim-python-pep8-indent'
-Plugin 'Townk/vim-autoclose'
+
+"Plugin 'lervag/vimtex'
+"Plugin 'vim-syntastic/syntastic'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ap/vim-buftabline'
+Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'tpope/vim-fugitive'
-"Plugin 'lervag/vimtex'
-Plugin 'LaTeX-Box-Team/LaTeX-Box'
-Plugin 'keith/swift.vim'
-Plugin 'vim-scripts/TaskList.vim'
-Plugin 'posva/vim-vue'
-Plugin 'mattn/emmet-vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'ap/vim-buftabline'
 Plugin 'junegunn/vim-peekaboo'
-Plugin 'artur-shaik/vim-javacomplete2'
+Plugin 'keith/swift.vim'
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plugin 'mattn/emmet-vim'
+Plugin 'posva/vim-vue'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Townk/vim-autoclose'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-scripts/TaskList.vim'
+Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'w0rp/ale'
+
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -293,6 +299,11 @@ let g:peekaboo_window = 'vert bo 65new'
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 
+" tasklist Keywords
+let g:tlTokenList = ["FIXME", "TODO", "todo"]
+
+" nerdtree settings
+map <C-n> :NERDTreeToggle<CR>
 
 
 colorscheme darcula
