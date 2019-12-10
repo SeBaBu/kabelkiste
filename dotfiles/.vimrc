@@ -39,7 +39,6 @@ call vundle#begin()
 "Plugin 'lervag/vimtex'
 "Plugin 'vim-syntastic/syntastic'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'ap/vim-buftabline'
 Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
@@ -47,6 +46,7 @@ Plugin 'junegunn/vim-peekaboo'
 Plugin 'keith/swift.vim'
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'mattn/emmet-vim'
+Plugin 'mattn/webapi-vim'
 Plugin 'posva/vim-vue'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Townk/vim-autoclose'
@@ -270,19 +270,6 @@ map gn :bn<cr>
 map gN :bp<cr>
 map gp :bp<cr>
 
-" Syntastic Settings:
-
-let g:syntastic_python_checkers = ['prospector', 'python']
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_html_checkers=['tidy']
-let g:syntastic_json_checkers=['jsonlint']
-
-" netrw settings
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
 
 " Leader key for Emmet
 let g:user_emmet_leader_key=','
@@ -305,5 +292,7 @@ let g:tlTokenList = ["FIXME", "TODO", "todo"]
 " nerdtree settings
 map <C-n> :NERDTreeToggle<CR>
 
+" airline settings
+let g:airline#extensions#tabline#enabled = 1 " Show buffers as tabs
 
 colorscheme darcula
