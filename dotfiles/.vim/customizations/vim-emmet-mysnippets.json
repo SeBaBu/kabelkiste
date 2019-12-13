@@ -1,0 +1,25 @@
+{
+	"variables": {
+		"pyversion": "python3",
+		"charset": "utf8",
+		"indentation": "    ",
+		"newline": "\n"
+	},
+	
+	"python": {
+		"filters": "python",
+		"profile": "python",
+		"snippets": {
+			"shebang" : "#!/usr/bin/env ${pyversion}${newline}# coding: ${charset}${newline}${newline}",
+			"openfile" : "",
+			"savefile" : "",
+			"basepath" : ""
+		},
+		"abbreviations": {
+			"osfile": "openfile+savefile"
+		}
+		
+	},
+	
+
+}
