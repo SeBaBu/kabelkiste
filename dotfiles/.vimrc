@@ -56,7 +56,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/TaskList.vim'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 
 
 " The following are examples of different formats supported.
@@ -179,8 +179,7 @@ set nojoinspaces
 "endif
 
 " Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
+autocmd FileType python setlocal textwidth=80 colorcolumn=+1
 
 " Numbers
 set number
@@ -270,11 +269,15 @@ map gn :bn<cr>
 map gN :bp<cr>
 map gp :bp<cr>
 
+" indent for curly brackets:
+inoremap {<cr> {<cr>}<c-o><s-o>
 
-" Leader key for Emmet
+" Emmet
 let g:user_emmet_leader_key=','
+let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/customizations/vim-emmet-mysnippets.json')), "\n"))
 
 " jedi-vim:
+
 let g:jedi#popup_on_dot = 0
 
 
@@ -294,5 +297,9 @@ map <C-n> :NERDTreeToggle<CR>
 
 " airline settings
 let g:airline#extensions#tabline#enabled = 1 " Show buffers as tabs
+
+" ale settings
+
+let g:ale_fixers = {'python': ['black']}
 
 colorscheme darcula
