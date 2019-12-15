@@ -44,6 +44,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'junegunn/vim-peekaboo'
 Plugin 'keith/swift.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'mattn/emmet-vim'
 Plugin 'mattn/webapi-vim'
@@ -300,6 +301,11 @@ let g:airline#extensions#tabline#enabled = 1 " Show buffers as tabs
 
 " ale settings
 
-let g:ale_fixers = {'python': ['black']}
+
+let g:ale_linters = {'python': ['flake8', 'mypy', 'pylint', 'prospector']}
+
+let g:ale_fixers = {'python': ['isort', 'black'],
+                   \'json': ['fixjson'],
+                   \'java': ['uncrustify']}
 
 colorscheme darcula
