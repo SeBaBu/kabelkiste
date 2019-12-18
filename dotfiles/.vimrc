@@ -273,6 +273,10 @@ map gp :bp<cr>
 " indent for curly brackets:
 inoremap {<cr> {<cr>}<c-o><s-o>
 
+" Toggle through splits:
+nnoremap <leader>w <C-w>w
+nnoremap <leader>W <C-w>W
+
 " Emmet
 let g:user_emmet_leader_key=','
 let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/customizations/vim-emmet-mysnippets.json')), "\n"))
