@@ -1,25 +1,31 @@
 {
 	"variables": {
-		"pyversion": "python3",
-		"charset": "utf8",
-		"indentation": "    ",
-		"newline": "\n"
+		"pythonversion": "python3",
+		"encoding": "utf-8"
 	},
-	
-	"python": {
-		"filters": "python",
-		"profile": "python",
-		"snippets": {
-			"shebang" : "#!/usr/bin/env ${pyversion}${newline}# coding: ${charset}${newline}${newline}",
-			"openfile" : "",
-			"savefile" : "",
-			"basepath" : ""
-		},
-		"abbreviations": {
-			"osfile": "openfile+savefile"
-		}
-		
-	},
-	
+    "python": {
+        "snippets": {
+			"py3": "#!/usr/bin/${pythonversion}\n# -*- coding: ${encoding} -*-\n\n\n${cursor}\n\n\ndef main():\n\tpass\n\n\nif __name__ == \"__main__\":\n\tmain()\n",
+            "fopen" : "def openfile(filepath):\n\twith open(filepath, \"r\", encoding=\"${encoding}\") as currentfile:\n\t\treturn currentfile.readlines()\n\n\n",
+            "fsave" : "def savefile(filepath, newcontent):\n\twith open(filepath, \"w\", encoding=\"${encoding}\") as currentfile:\n\t\tcurrentfile.writelines(newcontent)\n\n\n",
+            "basepath" : "",
+			"parameter": "",
+			"class": "",
+			"config": ""
+        }
+
+    },
+    "java": {
+        "snippets": {
+        	"class": ""
+        }
+	}
+
 
 }
+
+
+
+
+
+
