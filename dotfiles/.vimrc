@@ -40,11 +40,12 @@ call vundle#begin()
 "Plugin 'vim-syntastic/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'artur-shaik/vim-javacomplete2'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'dense-analysis/ale'
 Plugin 'ervandew/supertab'
 Plugin 'junegunn/vim-peekaboo'
 Plugin 'keith/swift.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'mattn/emmet-vim'
 Plugin 'mattn/webapi-vim'
@@ -57,7 +58,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/TaskList.vim'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'dense-analysis/ale'
 
 
 " The following are examples of different formats supported.
@@ -311,5 +311,20 @@ let g:ale_linters = {'python': ['flake8', 'mypy', 'pylint', 'prospector']}
 let g:ale_fixers = {'python': ['isort', 'black'],
                    \'json': ['fixjson'],
                    \'java': ['uncrustify']}
+
+
+" colorscheme toggle:
+
+function! s:SwitchColorscheme()
+    if g:colors_name == 'darcula'
+        colorscheme default
+    else
+        colorscheme darcula
+    endif
+endfunction
+map <silent> <F4> :call <SID>SwitchColorscheme()<CR>
+
+
+
 
 colorscheme darcula
