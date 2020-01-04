@@ -11,16 +11,13 @@
             "basepath" : "",
 			"parameter": "",
 			"class": "",
-			"config": ""
-        }
-
-    },
+			"config": "def openconfig(configfile):\n\twith open(configfile, \"r\", encoding=\"utf-8\") as currentconfigfile:\n\t\treturn json.load(currentconfigfile)\n\n\ndef saveconfig(configfile, newcontent):\n\twith open(configfile, \"w\", encoding=\"utf-8\") as currentconfigfile:\n\t\tjson.dump(newcontent, currentconfigfile, indent=4, sort_keys=True)"}
+		},
     "java": {
         "snippets": {
         	"class": ""
         }
 	}
-
 
 }
 
