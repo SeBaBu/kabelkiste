@@ -313,6 +313,11 @@ let g:ale_fixers = {'python': ['isort', 'black'],
                    \'java': ['uncrustify']}
 
 
+" Install the linter and fixer for a specific language automatically
+
+command InstallLinterFixPython python3 import pip; [pip.main(["install", singlepackage, "--user"]) for singlepackage in "flake8 pylint mypy prospector black isort".split(" ")]
+
+
 " colorscheme toggle:
 
 function! s:SwitchColorscheme()

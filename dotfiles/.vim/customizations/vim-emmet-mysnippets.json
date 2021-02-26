@@ -1,28 +1,22 @@
 {
-	"variables": {
-		"pythonversion": "python3",
-		"encoding": "utf-8"
-	},
+    "variables": {
+        "pythonversion": "python3",
+        "encoding": "utf-8"
+    },
     "python": {
         "snippets": {
-			"py3": "#!/usr/bin/${pythonversion}\n# -*- coding: ${encoding} -*-\n\n\n${cursor}\n\n\ndef main():\n\tpass\n\n\nif __name__ == \"__main__\":\n\tmain()\n",
-            "fopen" : "def openfile(filepath):\n\twith open(filepath, \"r\", encoding=\"${encoding}\") as currentfile:\n\t\treturn currentfile.readlines()\n\n\n",
-            "fsave" : "def savefile(filepath, newcontent):\n\twith open(filepath, \"w\", encoding=\"${encoding}\") as currentfile:\n\t\tcurrentfile.writelines(newcontent)\n\n\n",
-            "basepath" : "",
-			"parameter": "",
-			"class": "",
-			"config": "def openconfig(configfile):\n\twith open(configfile, \"r\", encoding=\"utf-8\") as currentconfigfile:\n\t\treturn json.load(currentconfigfile)\n\n\ndef saveconfig(configfile, newcontent):\n\twith open(configfile, \"w\", encoding=\"utf-8\") as currentconfigfile:\n\t\tjson.dump(newcontent, currentconfigfile, indent=4, sort_keys=True)"}
-		},
+            "py3": "#!/usr/bin/${pythonversion}\n# -*- coding: ${encoding} -*-\n\nimport os\nimport sys\n\n\nos.chdir(os.path.dirname(os.path.abspath(__file__)))\n\n\n${cursor}\n\n\ndef main():\n\tpass\n\n\nif __name__ == \"__main__\":\n\tmain()\n",
+            "fopen": "def openfile(filepath):\n\twith open(filepath, \"r\", encoding=\"${encoding}\") as currentfile:\n\t\treturn currentfile.readlines()\n\n\n",
+            "fsave": "def savefile(filepath, newcontent):\n\twith open(filepath, \"w\", encoding=\"${encoding}\") as currentfile:\n\t\tcurrentfile.writelines(newcontent)\n\n\n",
+            "basepath": "",
+            "parameter": "",
+            "class": "",
+            "config": "def openconfig(configfile):\n\twith open(configfile, \"r\", encoding=\"utf-8\") as currentconfigfile:\n\t\treturn json.load(currentconfigfile)\n\n\ndef saveconfig(configfile, newcontent):\n\twith open(configfile, \"w\", encoding=\"utf-8\") as currentconfigfile:\n\t\tjson.dump(newcontent, currentconfigfile, indent=4, sort_keys=True)"
+        }
+    },
     "java": {
         "snippets": {
-        	"class": ""
+            "class": "\npublic class ${id} {\n\tpublic static void main (String[] args){\n\t\t${cursor}\n\t}\n\n}\n"
         }
-	}
-
+    }
 }
-
-
-
-
-
-
